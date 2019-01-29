@@ -28,6 +28,10 @@ TARGET_BOOTANIMATION_SIZE := 1080
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.sdm660
+
 # Device properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
