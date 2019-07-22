@@ -9,7 +9,7 @@
     "remote":      "github",
     "repository":  "xiaomi-sdm660/android_kernel_xiaomi_clover",
     "target_path": "kernel/xiaomi/clover",
-    "branch":      "kernel.lnx.4.4.r34-rel"
+    "branch":      "master"
   },
   {
     "remote":      "github",

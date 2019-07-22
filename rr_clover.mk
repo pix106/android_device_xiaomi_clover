@@ -24,19 +24,21 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/clover/device.mk)
 
-# Inherit from Havoc custom product configuration
-$(call inherit-product, vendor/havoc/config/common.mk)
+# Inherit from RR custom product configuration
+# $(call inherit-product, vendor/rr/config/common.mk)
+
+# TODO :
+# $(call inherit-product, vendor/rr/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/rr/config/common_mini_tablet_wifionly.mk)
+
 
 DEVICE_PATH := device/xiaomi/clover
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.havoc.maintainer=rcstar6696
 
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
-PRODUCT_NAME := havoc_clover
+PRODUCT_NAME := rr_clover
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_DEVICE := clover
 PRODUCT_MODEL := MI PAD 4
