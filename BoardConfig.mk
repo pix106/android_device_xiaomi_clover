@@ -32,6 +32,9 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/clover
 TARGET_KERNEL_CONFIG := clover-perf_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := 9.0.5
+
 TW_USE_TOOLBOX := true
 
 # Platform
