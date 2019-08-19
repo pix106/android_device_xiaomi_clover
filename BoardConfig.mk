@@ -21,7 +21,7 @@
 # definition file).
 #
 
-include device/xiaomi/sdm660-common/PlatformConfig.mk
+include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 # Device Path
 DEVICE_PATH := device/xiaomi/clover
@@ -32,16 +32,10 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/clover
 TARGET_KERNEL_CONFIG := clover-perf_defconfig
-
-# Manifest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+TW_USE_TOOLBOX := true
 
 # Platform
 BOARD_VENDOR_PLATFORM := xiaomi-sdm660
-
-# Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_clover
-TARGET_RECOVERY_DEVICE_MODULES := libinit_clover
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2018-12-01
