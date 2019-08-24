@@ -34,6 +34,12 @@ $(call inherit-product, vendor/rr/config/common_mini_tablet_wifionly.mk)
 
 DEVICE_PATH := device/xiaomi/clover
 
+# Build Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	PRIVATE_BUILD_DESC="wayne-user 9 PKQ1.180904.001 V10.3.4.0.PDCCNXM release-keys"
+
+BUILD_FINGERPRINT="xiaomi/wayne/wayne:9/PKQ1.180904.001/V10.3.4.0.PDCCNXM:user/release-keys"
+
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
