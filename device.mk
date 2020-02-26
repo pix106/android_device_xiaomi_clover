@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 # Exclude Apex
 TW_EXCLUDE_APEX := true
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
 	libion \
