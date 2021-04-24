@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI PAD 4 lineage-OS device config
+# inherit MI PAD 4 Carbon device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_clover.mk
+    $(LOCAL_DIR)/carbon_clover.mk
 
 COMMON_LUNCH_CHOICES := \
-		lineage_clover-eng \
-		lineage_clover-userdebug \
-		lineage_clover-user
+		carbon_clover-eng \
+		carbon_clover-userdebug \
+		carbon_clover-user
