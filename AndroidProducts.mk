@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI PAD 4 lineage-OS device config
+# inherit MI PAD 4 ArrowOS device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_clover.mk
+    $(LOCAL_DIR)/arrow_clover.mk
 
 COMMON_LUNCH_CHOICES := \
-		lineage_clover-eng \
-		lineage_clover-userdebug \
-		lineage_clover-user
+		arrow_clover-eng \
+		arrow_clover-userdebug \
+		arrow_clover-user
