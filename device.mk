@@ -28,9 +28,6 @@ $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 # Device Path
 DEVICE_PATH := device/xiaomi/clover
 
-# APEX
-ENABLE_APEX := true
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
