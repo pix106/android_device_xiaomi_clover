@@ -13,9 +13,6 @@ DEVICE_PATH := device/xiaomi/clover
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
 
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Density
 TARGET_SCREEN_DENSITY := 320
 
