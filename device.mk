@@ -107,19 +107,7 @@ PRODUCT_PACKAGES += \
     check_f2fs
 
   # --- Vibration/Haptics
-  TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-
-  RECOVERY_BINARY_SOURCE_FILES += \
-    $(TARGET_OUT_VENDOR_EXECUTABLES)/hw/vendor.qti.hardware.vibrator.service
-
-  RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/vendor.qti.hardware.vibrator.impl.so \
-    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libqtivibratoreffect.so
-
-  TARGET_RECOVERY_DEVICE_MODULES += \
-	vendor.qti.hardware.vibrator.service \
-	vendor.qti.hardware.vibrator.impl \
-	libqtivibratoreffect
+  TW_SUPPORT_INPUT_AIDL_HAPTICS := false
 
      # --- Decryption (doesn't work!)
      OF_FBE_METADATA_MOUNT_IGNORE := 1
