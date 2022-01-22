@@ -125,6 +125,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
+TW_NO_HAPTICS := true
 # magiskboot, needed by sync_patchlevel.sh
 TW_INCLUDE_REPACKTOOLS := true
 
