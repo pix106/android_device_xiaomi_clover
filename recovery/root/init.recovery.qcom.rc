@@ -39,3 +39,6 @@ on fs
 on boot
     setprop sys.usb.config adb
 
+on init
+    setprop prepdecrypt.loglevel 2
+
