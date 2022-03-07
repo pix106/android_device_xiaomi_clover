@@ -69,6 +69,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     androidx.window.extensions
 
+# Task profiles
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/task_profiles/cgroups_26.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/cgroups_26.json \
+    $(DEVICE_PATH)/configs/task_profiles/task_profiles_26.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/task_profiles_26.json \
+    $(DEVICE_PATH)/configs/task_profiles/cgroups_26.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    $(DEVICE_PATH)/configs/task_profiles/task_profiles_26.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Wifi
 PRODUCT_PACKAGES += \
     CloverWifiOverlay
