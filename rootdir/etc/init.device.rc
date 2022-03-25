@@ -67,15 +67,3 @@ service macaddress_setup /vendor/bin/sh /vendor/bin/init.macaddress_setup.sh
    user root
    group root
    oneshot
-
-service folio_daemon /system/bin/folio_daemon
-    class late_start
-    user system
-    group system uhid
-    disabled
-
-on property:init.svc.zygote=running
-    start folio_daemon
-
-on property:init.svc.zygote=stopped
-    stop folio_daemon
