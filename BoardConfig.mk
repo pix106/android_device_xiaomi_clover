@@ -113,6 +113,7 @@ RECOVERY_SDCARD_ON_DATA := true
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone10/temp"
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 TW_SCREEN_BLANK_ON_BOOT := true
