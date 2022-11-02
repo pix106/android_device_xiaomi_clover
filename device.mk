@@ -45,6 +45,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
 PRODUCT_PACKAGES += \
+    CloverApertureOverlay \
     CloverFrameworksOverlay \
     CloverSystemUIOverlay
 

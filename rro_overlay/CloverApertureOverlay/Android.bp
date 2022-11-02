@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "CloverApertureOverlay",
+    theme: "CloverApertureOverlay",
+    product_specific: true,
+}
