@@ -1,5 +1,4 @@
 # Audio
-vendor/firmware/tas2557s_uCDSP_d9p.bin
 vendor/firmware/tas2557s_uCDSP.bin
 
 # Audio ACDB
