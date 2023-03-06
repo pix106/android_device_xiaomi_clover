@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit MI PAD 4 LineageOS device config
+# inherit MI PAD 4 tequilaOS device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_clover.mk
+    $(LOCAL_DIR)/tequila_clover.mk
 
 COMMON_LUNCH_CHOICES := \
-		lineage_clover-eng \
-		lineage_clover-userdebug \
-		lineage_clover-user
+	tequila_clover-eng \
+	tequila_clover-userdebug \
+	tequila_clover-user
