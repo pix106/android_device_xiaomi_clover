@@ -27,7 +27,4 @@
 <resources>
     <!-- Default radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">33px</dimen>
-
-    <!-- the padding of the rounded corner -->
-    <dimen name="rounded_corner_content_padding">8dp</dimen>
 </resources>
