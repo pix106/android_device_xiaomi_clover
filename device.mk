@@ -81,8 +81,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 # Tablet Specific
-PRODUCT_PACKAGES += \
-    androidx.window.extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # Wifi
 PRODUCT_PACKAGES += \
