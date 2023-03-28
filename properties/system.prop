@@ -1,1 +1,4 @@
 audio.chk.cal.us=0
+
+# Baseband
+gsm.version.baseband?=Wi-Fi Only
