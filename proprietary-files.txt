@@ -2,14 +2,6 @@
 vendor/firmware/tas2557s_uCDSP.bin
 
 # Audio ACDB - from clover-user 8.1.0 OPM1.171019.019 9.8.29 release-keys
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|8b6349fd699ca25f638921cbe7cb02948fe3e77c
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|6855c95c2ba1094845a37ab18d3c438f8fefa341
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|a3f1b365512ccb5aceedfd17c74be894e9a1a22c
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|2569ff19051a63b512b6c57afce9b2c7bfa0e93b
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|512d148f9fd7083944ab561eb115d5e883659143
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|f66ec81b7806685a3b310cb5ff627b0dd1710ca0
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|caac9c761e94d29f25029ebad94fa44415a52638
-vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|45cd83d0c7efae47676eb94b1abeee9d2088ad8f
 vendor/etc/acdbdata/adsp_avs_config.acdb|840a3cc7f9ae4749f309f0291299087754b97409
 vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Bluetooth_cal.acdb|d198cc72e8d5e7f8b7ce61bda3d4cdc59f057947
 vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_General_cal.acdb|a1393b882ffa5f441cd0fd35ce25f88f5a7d420f
