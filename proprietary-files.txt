@@ -1,32 +1,32 @@
 # Audio
 vendor/firmware/tas2557s_uCDSP.bin
 
-# Audio ACDB
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_General_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Global_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_General_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Global_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_workspaceFile.qwsp
+# Audio ACDB - from clover-user 8.1.0 OPM1.171019.019 9.8.29 release-keys
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|8b6349fd699ca25f638921cbe7cb02948fe3e77c
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|6855c95c2ba1094845a37ab18d3c438f8fefa341
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|a3f1b365512ccb5aceedfd17c74be894e9a1a22c
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|2569ff19051a63b512b6c57afce9b2c7bfa0e93b
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|512d148f9fd7083944ab561eb115d5e883659143
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|f66ec81b7806685a3b310cb5ff627b0dd1710ca0
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|caac9c761e94d29f25029ebad94fa44415a52638
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|45cd83d0c7efae47676eb94b1abeee9d2088ad8f
+vendor/etc/acdbdata/adsp_avs_config.acdb|840a3cc7f9ae4749f309f0291299087754b97409
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Bluetooth_cal.acdb|d198cc72e8d5e7f8b7ce61bda3d4cdc59f057947
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_General_cal.acdb|a1393b882ffa5f441cd0fd35ce25f88f5a7d420f
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Global_cal.acdb|690d0a8d204a43b9c195dcd9946792f68893751e
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Handset_cal.acdb|a948cb40cf6669964c72a673ff777b0196466073
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Hdmi_cal.acdb|b2ef8a9b9a7f770a7748d74a927d3689ead2c876
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Headset_cal.acdb|f326f12f7e35065a781a9480d6cb1eaab535c1af
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Speaker_cal.acdb|6a7fd4d56fe10a6256c03fd4add2fa53e20a5b32
+vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_workspaceFile.qwsp|35068906ed7d66f693100aeb6f448cf505c64f84
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Bluetooth_cal.acdb|d6493892f583471d6f16e21ca161f7daeea9de29
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_General_cal.acdb|068655f72b67afab1fe192468baaa31562be5682
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Global_cal.acdb|fa306511f2d07925787197ac21ad3e00bc39b071
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Handset_cal.acdb|f18130061d5d1413908c0b7003066974499436f2
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Hdmi_cal.acdb|40845f4f646d5c03d558ebb11f7291b3be955f43
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Headset_cal.acdb|bebbdbe3e9340bc953af172382b4f560bb240388
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Speaker_cal.acdb|cd7a8dcac2dfe278df12b6e2928c4937f2ac6b45
+vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_workspaceFile.qwsp|bcfe7eab26cf80daae322dbc74b25e3edf9c19cf
 
 # Camera
 vendor/etc/camera/camera_config.xml
