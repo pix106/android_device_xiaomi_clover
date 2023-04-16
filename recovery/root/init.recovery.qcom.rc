@@ -44,6 +44,8 @@ on init
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    # DT2W
+    write /sys/touchpanel/double_tap 1
 
 on boot
     start health-hal-2-1
