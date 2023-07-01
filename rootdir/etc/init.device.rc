@@ -45,6 +45,9 @@ on property:ro.vendor.radio.noril=yes
         setprop persist.vendor.data.mode "disabled"
 	mount none /dev/null /system/priv-app/TeleService/TeleService.apk bind
 
+on property:ro.board.variant=d9
+	mount none /dev/null /vendor/overlay/CloverTenInchFrameworksPowerOverlay.apk bind
+
 # Set max charge current
 on property:sys.incall=true
     write /sys/class/power_supply/battery/constant_charge_current_max 500000

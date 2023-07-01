@@ -47,7 +47,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     CloverApertureOverlay \
     CloverFrameworksOverlay \
-    CloverSystemUIOverlay
+    CloverSystemUIOverlay \
+    CloverTenInchFrameworksPowerOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
