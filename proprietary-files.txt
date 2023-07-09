@@ -354,18 +354,18 @@ vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libqfp-service.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# Gatekeeper QTI - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|634b7bb3cffcfea34c7be72e4d8e5c902bda5036
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|23c1c647a6bd2b91a97ea48a0e13b273e9d57e45
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|de215e0422b21ba5f21a9aeeaff5fc0b5869be2e
-
-# Keymaster - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|6fdf7c3033c2738eeecb33f6a625526873c6c325
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|a4939ac6fa1be764110d573cdeb49f14eed80f44
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so|122c6f34831b3e2f32e0b3140e1044fba3619bfc
+# Keymaster - from S62Pro RKQ1.210406.002
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|002c638011b1936fecaa896874d3361ec68eaa46
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|a3c2f2a5006a85015b6081136e1b52d22ef24f10
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so|ce2b3776fb2e69f893cab0c2fda751b493b1a7be
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
-vendor/lib64/libqcbor.so|dc6b0d7ac44d7a8de35403cc92ee4417b154db5d
+vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
+
+# Gatekeeper QTI - from S62Pro RKQ1.210406.002
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|335cc2f4e263b4c20b2b7ad5cd6c39c68cdea7ba
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
 
 # Thermal (Configs)
 vendor/etc/thermal-engine-battery.conf
