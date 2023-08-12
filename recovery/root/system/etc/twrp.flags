@@ -14,7 +14,6 @@
 /vendor        ext4   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
 /persist_image emmc    	/dev/block/bootdevice/by-name/persist                 	flags=display="Persist (Image)";backup=1;flashimg=1
 
-/dtbo          emmc     /dev/block/bootdevice/by-name/dtbo                      flags=display="Dtbo";backup=1;flashimg=1
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                   	flags=display="Firmware";mounttodecrypt;fsflags=ro
 /firmware_image   emmc  /dev/block/bootdevice/by-name/modem        		flags=display="Firmware_image";flashimg=1;backup=0
 /cust          ext4   	/dev/block/bootdevice/by-name/cust                      flags=display="Cust"
@@ -29,8 +28,7 @@
 /efsc          emmc   	/dev/block/bootdevice/by-name/fsc                       flags=backup=1;subpartitionof=/efs1
 /efsg          emmc   	/dev/block/bootdevice/by-name/fsg                       flags=backup=1;subpartitionof=/efs1
 /persist       ext4     /dev/block/bootdevice/by-name/persist                   flags=display="Persist";backup=0
-/splash        emmc    /dev/block/bootdevice/by-name/splash               	flags=display="Boot Logo";backup=1;flashimg=1
-/vbmeta_image  emmc    /dev/block/bootdevice/by-name/vbmeta                   	flags=display="Vbmeta (Image)";backup=1;flashimg=1
+/logo          emmc     /dev/block/bootdevice/by-name/logo               	flags=display="Boot Logo";backup=1;flashimg=1
 
 # Removable storage
 /storage	auto  	/data/media/0                  		     		flags=display="Internal Storage";usermrf;backup=1;fsflags="bind,utf8";removable

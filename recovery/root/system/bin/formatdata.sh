@@ -24,7 +24,7 @@ source /system/bin/lavenderfuncs.sh
 # format the metadata partition using alternative methods
 format_metadata() {
 # the supported device(s)
-local SUPPORTED_DEVICE="lavender";
+local SUPPORTED_DEVICE="clover";
 
 	local dyn=$(rom_has_dynamic_partitions);
 	[ "$dyn" != "1" ] && return;

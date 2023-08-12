@@ -21,13 +21,13 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-LOCAL_PATH := device/xiaomi/lavender
+LOCAL_PATH := device/xiaomi/clover
 
 # Exclude Apex
 TW_EXCLUDE_APEX := true
 
 # api level
-PRODUCT_SHIPPING_API_LEVEL := 28
+PRODUCT_SHIPPING_API_LEVEL := 27
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -89,7 +89,7 @@ else
 endif
 
 # kernel 4.19, static or dynamic
-ifeq ($(FOX_LAVENDER_KERNEL),4.19)
+ifeq ($(FOX_CLOVER_KERNEL),4.19)
 
 # FUSE passthrough
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -136,7 +136,7 @@ endif
 
 # kernel
   PRODUCT_PROPERTY_OVERRIDES += \
-	ro.orangefox.kernel_ver=$(FOX_LAVENDER_KERNEL)
+	ro.orangefox.kernel_ver=$(FOX_CLOVER_KERNEL)
 
 # initial prop for variant
 ifneq ($(FOX_VARIANT),)

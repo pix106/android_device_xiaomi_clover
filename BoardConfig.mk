@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/lavender
+DEVICE_PATH := device/xiaomi/clover
 
 # Architecture
 TARGET_ARCH := arm64
@@ -51,7 +51,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lavender
+TARGET_OTA_ASSERT_DEVICE := clover
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000
@@ -69,7 +69,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 
 # kernel 4.19 or 4.4? - locations of stuff
-ifeq ($(FOX_LAVENDER_KERNEL),4.19)
+ifeq ($(FOX_CLOVER_KERNEL),4.19)
   KERNEL_STUFF_LOCATION := kernel_419
 else
   KERNEL_STUFF_LOCATION := kernel_44
@@ -77,8 +77,8 @@ endif
 
 # kernel to use
 ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
-  TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
-  TARGET_KERNEL_CONFIG := lavender-fox_defconfig
+  TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
+  TARGET_KERNEL_CONFIG := clover-fox_defconfig
 else
   KERNEL_DIRECTORY := $(DEVICE_PATH)/prebuilt/$(KERNEL_STUFF_LOCATION)
   TARGET_PREBUILT_KERNEL := $(KERNEL_DIRECTORY)/Image.gz-dtb
@@ -125,19 +125,6 @@ TW_USE_TOOLBOX := true
 # Debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
-#AVB
-BOARD_AVB_ENABLE := true
-BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
-BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-BOARD_AVB_VBMETA_SYSTEM := system
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
-BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # other flags
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -188,9 +175,8 @@ ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
   BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 
   # source directory for variants
-  ifeq ($(FOX_LAVENDER_KERNEL),4.19)
+  ifeq ($(FOX_CLOVER_KERNEL),4.19)
   	BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-	BOARD_AVB_VBMETA_SYSTEM := product system system_ext
   endif
 
 else
@@ -209,7 +195,7 @@ PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/init.recovery.qcom.rc:$(TARGET_COPY_OUT
 #PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc
 
 # extra stuff for 4.4
-ifeq ($(FOX_LAVENDER_KERNEL),4.4)
+ifeq ($(FOX_CLOVER_KERNEL),4.4)
 	PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/recovery-dynamic-44-flags.fstab:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/recovery-dynamic-44-flags.fstab
 endif
 

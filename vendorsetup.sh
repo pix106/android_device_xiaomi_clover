@@ -17,7 +17,7 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="lavender"
+FDEVICE="clover"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
@@ -55,13 +55,13 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	fi
 
-	if [ "$FOX_LAVENDER_KERNEL" = "4.19" ]; then
-		echo "lavender: building for kernel v4.19"
+	if [ "$FOX_CLOVER_KERNEL" = "4.19" ]; then
+		echo "clover: building for kernel v4.19"
 		export FOX_VARIANT="kernel_419"
 		export FOX_USE_DATA_RECOVERY_FOR_SETTINGS=1
 		export FOX_VANILLA_BUILD=1
 	else
-		echo "lavender: building for kernel v4.4"
+		echo "clover: building for kernel v4.4"
 		export FOX_VARIANT="kernel_44"
 	fi
 else

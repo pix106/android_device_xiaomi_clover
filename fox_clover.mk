@@ -20,11 +20,11 @@
 
 # OrangeFox-specific settings #
 
-OF_SCREEN_H := 2340
-OF_STATUS_H := 80
-OF_STATUS_INDENT_LEFT := 64
-OF_STATUS_INDENT_RIGHT := 64
-OF_HIDE_NOTCH := 1
+OF_SCREEN_H := 1920
+OF_STATUS_H := 0
+OF_STATUS_INDENT_LEFT := 0
+OF_STATUS_INDENT_RIGHT := 0
+OF_HIDE_NOTCH := 0
 OF_CLOCK_POS := 1
 
 OF_USE_GREEN_LED := 0
@@ -35,10 +35,10 @@ OF_UNBIND_SDCARD_F2FS := 1
 OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;
 
 # keymaster
-OF_DEFAULT_KEYMASTER_VERSION := 4.0
+OF_DEFAULT_KEYMASTER_VERSION := 3.0
 
 # patch avb20 - some ROM recoveries try to overwrite custom recoveries
-OF_PATCH_AVB20 := 1
+OF_PATCH_AVB20 := 0
 
 # no additional check for MIUI props
 OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1

@@ -46,7 +46,7 @@ is_dynamic_build() {
 
 # report whether the ROM has dynamic partitions
 rom_has_dynamic_partitions() {
-  local BUILD_DEVICE="lavender";
+  local BUILD_DEVICE="clover";
   local markers="xiaomi_dynamic_partitions qti_dynamic_partitions qti_dynpart "$BUILD_DEVICE"_dynamic_partitions "$BUILD_DEVICE"_dynpart xiaomi_dynpart ";
   local F=/tmp/blck_tmp;
   dd if=/dev/block/by-name/system bs=256k count=1 of=$F;
