@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-PRODUCT_RELEASE_NAME := lavender
+PRODUCT_RELEASE_NAME := clover
 DEVICE_PATH := device/xiaomi/$(PRODUCT_RELEASE_NAME)
 
 # Inherit from those products. Most specific first.
@@ -27,7 +27,7 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from lavender device
+# Inherit from clover device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Inherit some common Omni stuff.
@@ -37,5 +37,5 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := xiaomi
-PRODUCT_MODEL := Redmi Note 7
+PRODUCT_MODEL := Mi Pad 4
 PRODUCT_MANUFACTURER := xiaomi

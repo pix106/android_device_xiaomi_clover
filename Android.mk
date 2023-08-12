@@ -20,6 +20,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), lavender)
+ifeq ($(TARGET_DEVICE), clover)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
