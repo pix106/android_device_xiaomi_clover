@@ -28,9 +28,6 @@ TARGET_KERNEL_CONFIG := clover_defconfig
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
-# Platform
-BOARD_VENDOR_PLATFORM := xiaomi-sdm660
-
 # WLAN MAC
 WLAN_MAC_SYMLINK := true
 
