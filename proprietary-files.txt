@@ -21,18 +21,18 @@ vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_Speaker_cal.acdb|cd7a8dcac2d
 vendor/etc/acdbdata/QRD/sdm660-snd-card-d9p/QRD_D9P_workspaceFile.qwsp|bcfe7eab26cf80daae322dbc74b25e3edf9c19cf
 
 # Common Camera - from Pie
-vendor/lib/libchromaflash.so|cf85560822e04014b8950a1abae9c2843069101d
+vendor/lib/libchromaflash.so|f440c0e673a63b05e801590597bea363f358bc73
 vendor/lib/libllvd_smore.so|740de4c339772df80858ddd9390f91ead71eadeb
 vendor/lib/libmmcamera_chromaflash_lib.so|2ac15c08e7916b039b9d053a2d5c6846ed28ae41
 vendor/lib/libmmcamera_llvd.so|6fca05767e27b9a5f0050fc9296069c09e9f5dba
 vendor/lib/libmmcamera_optizoom_lib.so|0d54dcba2f86236b66384aa83861693451ee0451
 vendor/lib/libmmcamera_stillmore_lib.so|d313da5abb76da8a4328d18e13aaa3f042f63e47
 vendor/lib/libmmcamera_trueportrait_lib.so|41f491298caf7ddd2fd19b9f71906fd9f2a826ff
-vendor/lib/libmmcamera_ubifocus_lib.so|204680decba87b04a2eb5ad4746e69f8e0c413bc
-vendor/lib/liboptizoom.so|1e92993743636c045438f1f15c07c1e835d9ca46
+vendor/lib/libmmcamera_ubifocus_lib.so|0ca7954a0a773dd00821c2740bca0f99a5604e1e
+vendor/lib/liboptizoom.so|8c27c659bc98ee325d7d146d37262a8f8807ac0d
 vendor/lib/libseemore.so|cd207541c3cdd97eb25ef2a9c63662054393e81f
-vendor/lib/libtrueportrait.so|b8e11c098bd859aae6c535cdb87e3e36f6b1c6ef
-vendor/lib/libubifocus.so|833a305c780b2e7e338323c5ba27cb042f5cc3ed
+vendor/lib/libtrueportrait.so|26f706e1eada29c93951ddc386cdcc3f40a56ab8
+vendor/lib/libubifocus.so|e43acd6f4adbfb251f4c2e09ecd08d1f311507a4
 
 # Camera
 vendor/etc/camera/camera_config.xml

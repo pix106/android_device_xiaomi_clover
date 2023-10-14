@@ -36,5 +36,10 @@ export DEVICE_BRINGUP_YEAR=2018
 DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_bokeh.so
 patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_ppeiscore.so
+patchelf --replace-needed libstdc++.so libstdc++_vendor.so "$DEVICE_BLOB_ROOT"/vendor/lib/libchromaflash.so
+patchelf --replace-needed libstdc++.so libstdc++_vendor.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_ubifocus_lib.so
+patchelf --replace-needed libstdc++.so libstdc++_vendor.so "$DEVICE_BLOB_ROOT"/vendor/lib/liboptizoom.so
+patchelf --replace-needed libstdc++.so libstdc++_vendor.so "$DEVICE_BLOB_ROOT"/vendor/lib/libtrueportrait.so
+patchelf --replace-needed libstdc++.so libstdc++_vendor.so "$DEVICE_BLOB_ROOT"/vendor/lib/libubifocus.so
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
