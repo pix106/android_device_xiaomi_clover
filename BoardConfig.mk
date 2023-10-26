@@ -131,10 +131,6 @@ TW_INCLUDE_REPACKTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-# Notch
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
-
 # other flags
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
