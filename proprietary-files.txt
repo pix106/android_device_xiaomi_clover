@@ -351,7 +351,6 @@ vendor/etc/qdcm_calib_data_NT51021_BOE_BOE.xml
 vendor/etc/qdcm_calib_data_NT51021_BOE_BOE10.xml
 
 # Fingerprint sensor
--vendor/app/QFingerprintService/QFingerprintService.apk
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
