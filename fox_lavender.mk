@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2023 The OrangeFox Recovery Project
+# 	Copyright (C) 2023-2024 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@
 
 OF_SCREEN_H := 2340
 OF_STATUS_H := 80
-OF_STATUS_INDENT_LEFT := 48
-OF_STATUS_INDENT_RIGHT := 48
+OF_STATUS_INDENT_LEFT := 64
+OF_STATUS_INDENT_RIGHT := 64
 OF_HIDE_NOTCH := 1
 OF_CLOCK_POS := 1
 
@@ -51,4 +51,6 @@ OF_RUN_POST_FORMAT_PROCESS := 1
 OF_KEEP_FORCED_ENCRYPTION := 1
 OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 
+# don't save historic logs
+OF_DONT_KEEP_LOG_HISTORY := 1
 #
