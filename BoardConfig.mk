@@ -3,7 +3,7 @@
 # Copyright (C) 2020 The TWRP Open Source Project
 # Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
 #
-# Copyright (C) 2019-2023 The OrangeFox Recovery Project
+# Copyright (C) 2019-2024 The OrangeFox Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -67,11 +67,20 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-KERNEL_DIRECTORY := $(DEVICE_PATH)/prebuilt
+
+# kernel 4.19 or 4.4? - locations of stuff
+ifeq ($(FOX_LAVENDER_KERNEL),4.19)
+  KERNEL_STUFF_LOCATION := kernel_419
+else
+  KERNEL_STUFF_LOCATION := kernel_44
+endif
+
+# kernel to use
 ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
   TARGET_KERNEL_CONFIG := lavender-fox_defconfig
 else
+  KERNEL_DIRECTORY := $(DEVICE_PATH)/prebuilt/$(KERNEL_STUFF_LOCATION)
   TARGET_PREBUILT_KERNEL := $(KERNEL_DIRECTORY)/Image.gz-dtb
 endif
 
@@ -105,20 +114,12 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-BOARD_USES_QCOM_FBE_DECRYPTION := true
-PLATFORM_VERSION := 99.87.36
-PLATFORM_SECURITY_PATCH := 2127-12-31
-
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
-
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_FRAMERATE := 60
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
@@ -157,4 +158,67 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # deal with "error: overriding commands for target" problems
 BUILD_BROKEN_DUP_RULES := true
+
+# retrofitted dynamic partitions?
+ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
+
+  BOARD_USES_QCOM_HARDWARE := true
+
+  BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci androidboot.super_partition=system buildvariant=eng
+
+  OF_QUICK_BACKUP_LIST := /boot;/data;
+  TW_INCLUDE_FASTBOOTD := true
+  BOARD_USES_METADATA_PARTITION := true
+  BOARD_BUILD_SYSTEM_ROOT_IMAGE :=
+
+  BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
+  BOARD_SUPER_PARTITION_SIZE := 6773800960
+  BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
+  BOARD_XIAOMI_DYNAMIC_PARTITION_LIST := system system_ext product vendor odm
+
+  BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor cust
+  BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor
+  BOARD_SUPER_PARTITION_METADATA_DEVICE := system
+
+  BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 611975168
+  BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 2061152256
+  BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 1452175360
+
+  BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 328368128
+  BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 675061760
+
+  BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+  BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+
+  # source directory for variants
+  ifeq ($(FOX_LAVENDER_KERNEL),4.19)
+  	BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+  endif
+
+else
+  OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;
+  BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3758096384
+  BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
+endif
+
+VARIANT_SRC_DIR := $(DEVICE_PATH)/recovery/$(KERNEL_STUFF_LOCATION)
+
+# fstab
+TARGET_RECOVERY_FSTAB := $(VARIANT_SRC_DIR)/recovery.fstab
+
+# .rc files
+PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+#PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc
+
+# extra stuff for 4.4
+ifeq ($(FOX_LAVENDER_KERNEL),4.4)
+	PRODUCT_COPY_FILES += $(VARIANT_SRC_DIR)/recovery-dynamic-44-flags.fstab:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/recovery-dynamic-44-flags.fstab
+endif
+
+# resetprop
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
+
+# drift/offset
+TW_QCOM_ATS_OFFSET := 1617714502203
 #
