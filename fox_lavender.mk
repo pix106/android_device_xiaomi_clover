@@ -30,7 +30,6 @@ OF_CLOCK_POS := 1
 OF_USE_GREEN_LED := 0
 
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
-OF_SKIP_MULTIUSER_FOLDERS_BACKUP := 1
 OF_UNBIND_SDCARD_F2FS := 1
 
 OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;
@@ -46,9 +45,6 @@ OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
 
 # dispense with the entire OTA menu
 OF_DISABLE_OTA_MENU := 1
-
-# run a process after formatting data to work-around MTP issues
-OF_RUN_POST_FORMAT_PROCESS := 1
 
 # encryption stiff
 OF_KEEP_FORCED_ENCRYPTION := 1
