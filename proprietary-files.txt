@@ -354,7 +354,6 @@ vendor/etc/qdcm_calib_data_NT51021_BOE_BOE10.xml
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
-vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Keymaster - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys

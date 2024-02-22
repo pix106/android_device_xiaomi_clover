@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    com.fingerprints.extension@1.0.vendor
+
 # Folio
 PRODUCT_PACKAGES += \
     folio_daemon
