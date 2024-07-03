@@ -48,11 +48,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_DYNAMIC_PARTITIONS=1; # all builds now support dynamic partitions
 	if [ "$FOX_USE_DYNAMIC_PARTITIONS" = "1" ]; then
    		export FOX_BASH_TO_SYSTEM_BIN=1; # install the bash binary to /system/bin/ instead of /sbin/
-		#export FOX_VANILLA_BUILD=1
 		export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 		export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 		if [ "$FOX_LAVENDER_KERNEL" = "4.19" ]; then
-   			export FOX_VARIANT="kernel_419"
+			export FOX_VARIANT="kernel_419"
+			export FOX_USE_DATA_RECOVERY_FOR_SETTINGS=1
+			export FOX_VANILLA_BUILD=1
 		fi
 	fi
 else
