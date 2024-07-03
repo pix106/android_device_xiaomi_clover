@@ -52,4 +52,7 @@ OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 
 # don't save historic logs
 OF_DONT_KEEP_LOG_HISTORY := 1
+
+# number of list options before scrollbar creation
+OF_OPTIONS_LIST_NUM := 9
 #
