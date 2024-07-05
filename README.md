@@ -27,7 +27,7 @@
 ## Kernel sources:
 Kernel 4.4: "https://github.com/kyasu/android_kernel_xiaomi_sdm660.git"
 
-Kernel 4.19:  "https://github.com/pix106/android_kernel_xiaomi_southwest-4.19.git"
+Kernel 4.19:  "https://github.com/crdroidandroid/android_kernel_xiaomi_lavender.git"
 
 ### Copyright
  ```
