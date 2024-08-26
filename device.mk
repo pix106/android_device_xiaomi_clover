@@ -91,6 +91,22 @@ endif
 # kernel 4.19, static or dynamic
 ifeq ($(FOX_LAVENDER_KERNEL),4.19)
 
+# FUSE passthrough
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# f2fs utilities
+PRODUCT_PACKAGES += \
+    sg_write_buffer \
+    f2fs_io \
+    check_f2fs
+
+
   # --- Vibration/Haptics
   TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
