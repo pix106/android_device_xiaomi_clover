@@ -193,6 +193,7 @@ ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
   # source directory for variants
   ifeq ($(FOX_LAVENDER_KERNEL),4.19)
   	BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+	BOARD_AVB_VBMETA_SYSTEM := product system system_ext
   endif
 
 else
