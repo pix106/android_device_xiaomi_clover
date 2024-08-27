@@ -27,6 +27,9 @@ $(call inherit-product, vendor/pixelage/config/common_full_tablet.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/clover/device.mk)
 
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+WITH_GMS := true
+
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
