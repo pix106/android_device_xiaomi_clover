@@ -42,6 +42,10 @@ on property:ro.vendor.radio.noril=yes
 	mount none /dev/null /system/system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk bind
 	mount none /dev/null /system/priv-app/TeleService/TeleService.apk bind
         setprop persist.vendor.data.mode "disabled"
+        stop vendor.qcrild
+        stop vendor.qcrild2
+        stop vendor.dataqti
+        stop vendor.dataadpl
 
 # Set max charge current
 on property:sys.incall=true
