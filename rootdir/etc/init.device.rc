@@ -46,6 +46,10 @@ on property:ro.vendor.radio.noril=yes
 	mount none /dev/null /system/priv-app/TeleService/TeleService.apk bind
 	mount none /dev/null /vendor/overlay/SDM660RILFrameworksOverlay.apk bind
 	mount none /dev/null /vendor/overlay/SDM660RILSettingsOverlay.apk bind
+        stop vendor.qcrild
+        stop vendor.qcrild2
+        stop vendor.dataqti
+        stop vendor.dataadpl
 
 on property:ro.board.variant=d9
 	mount none /dev/null /vendor/overlay/CloverTenInchFrameworksPowerOverlay.apk bind
