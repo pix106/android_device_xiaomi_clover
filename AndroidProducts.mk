@@ -21,6 +21,6 @@
 # definition file).
 #
 
-# inherit MI PAD 4 LineageOS device config
+# inherit MI PAD 4 Pixelage device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_clover.mk
+    $(LOCAL_DIR)/pixelage_clover.mk
