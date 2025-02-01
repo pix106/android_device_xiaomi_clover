@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2023-2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2023-2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -55,4 +55,7 @@ OF_DONT_KEEP_LOG_HISTORY := 1
 
 # number of list options before scrollbar creation
 OF_OPTIONS_LIST_NUM := 9
+
+# build all the partition tools
+OF_ENABLE_ALL_PARTITION_TOOLS := 1
 #
