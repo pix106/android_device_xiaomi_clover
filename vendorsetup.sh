@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2019-2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2019-2025 The OrangeFox Recovery Project
 #	
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -43,6 +43,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export FOX_USE_LZ4_BINARY=1
 	export FOX_USE_ZSTD_BINARY=1
+	export FOX_USE_DATE_BINARY=1
 
         # retrofitted dynamic partitions
 	export FOX_USE_DYNAMIC_PARTITIONS=1; # all builds now support dynamic partitions
