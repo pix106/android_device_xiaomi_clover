@@ -58,4 +58,7 @@ OF_OPTIONS_LIST_NUM := 9
 
 # build all the partition tools
 OF_ENABLE_ALL_PARTITION_TOOLS := 1
+
+# use legacy code for wrong clock issues
+OF_USE_LEGACY_TIME_FIXUP := 1
 #
