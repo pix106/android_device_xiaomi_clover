@@ -13,7 +13,6 @@
 /system_root   ext4   	/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui
 /vendor        ext4   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
 /persist_image emmc    	/dev/block/bootdevice/by-name/persist                 	flags=display="Persist (Image)";backup=1;flashimg=1
-/storage       ext4  	/data/media/0                  		     		flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 
 /dtbo          emmc     /dev/block/bootdevice/by-name/dtbo                      flags=display="Dtbo";backup=1;flashimg=1
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                   	flags=display="Firmware";mounttodecrypt;fsflags=ro
@@ -34,6 +33,7 @@
 /vbmeta_image  emmc    /dev/block/bootdevice/by-name/vbmeta                   	flags=display="Vbmeta (Image)";backup=1;flashimg=1
 
 # Removable storage
+/storage	auto  	/data/media/0                  		     		flags=display="Internal Storage";usermrf;backup=1;fsflags="bind,utf8";removable
 /usb_otg	auto /dev/block/sda1                    /dev/block/sda          flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
 /sdcard1	auto /dev/block/mmcblk1p1               /dev/block/mmcblk1      flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable
 #
