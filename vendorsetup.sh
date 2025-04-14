@@ -51,11 +51,16 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    		export FOX_BASH_TO_SYSTEM_BIN=1; # install the bash binary to /system/bin/ instead of /sbin/
 		export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 		export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-		if [ "$FOX_LAVENDER_KERNEL" = "4.19" ]; then
-			export FOX_VARIANT="kernel_419"
-			export FOX_USE_DATA_RECOVERY_FOR_SETTINGS=1
-			export FOX_VANILLA_BUILD=1
-		fi
+	fi
+
+	if [ "$FOX_LAVENDER_KERNEL" = "4.19" ]; then
+		echo "lavender: building for kernel v4.19"
+		export FOX_VARIANT="kernel_419"
+		export FOX_USE_DATA_RECOVERY_FOR_SETTINGS=1
+		export FOX_VANILLA_BUILD=1
+	else
+		echo "lavender: building for kernel v4.4"
+		export FOX_VARIANT="kernel_44"
 	fi
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
