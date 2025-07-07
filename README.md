@@ -27,14 +27,14 @@
 ## Kernel sources:
 Kernel 4.4: "https://github.com/kyasu/android_kernel_xiaomi_sdm660.git"
 
-Kernel 4.19:  "https://github.com/crdroidandroid/android_kernel_xiaomi_lavender.git"
+Kernel 4.19: "https://github.com/pix106/android_kernel_xiaomi_southwest-4.19/tree/main-dynamic"
 
 ### Copyright
  ```
   /*
   *  Copyright (C) 2013-2020 The TWRP
   *
-  *  Copyright (C) 2019-2024 The OrangeFox Recovery Project
+  *  Copyright (C) 2019-2025 The OrangeFox Recovery Project
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
