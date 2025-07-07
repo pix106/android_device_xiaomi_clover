@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2019-2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2019-2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
-
   # --- Vibration/Haptics
   TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
@@ -123,10 +122,14 @@ PRODUCT_PACKAGES += \
 	libqtivibratoreffect
 
      # --- Decryption (doesn't work!)
+     OF_FBE_METADATA_MOUNT_IGNORE := 1
+     OF_FIX_DECRYPTION_ON_DATA_MEDIA := 1
+
      PRODUCT_PROPERTY_OVERRIDES += \
     	ro.crypto.dm_default_key.options_format.version=2 \
     	ro.crypto.volume.filenames_mode=aes-256-cts \
     	ro.crypto.volume.metadata.method=dm-default-key \
+	ro.crypto.allow_encrypt_override=true \
     	ro.crypto.volume.options=::v2 \
     	ro.crypto.uses_fs_ioc_add_encryption_key=true
 endif
