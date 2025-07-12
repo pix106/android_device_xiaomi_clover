@@ -8,5 +8,4 @@ sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
 ro.product.board=sdm660
 ro.board.platform=sdm660
-keymaster_ver=3.0
 #
