@@ -50,6 +50,7 @@ on property:ro.vendor.radio.noril=yes
         stop vendor.qcrild2
         stop vendor.dataqti
         stop vendor.dataadpl
+        stop vendor.radio-compat
 
 on property:ro.board.variant=d9
 	mount none /dev/null /vendor/overlay/CloverTenInchFrameworksPowerOverlay.apk bind
