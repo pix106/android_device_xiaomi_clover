@@ -4,6 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Disable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
+    <!-- Fingerprint -->
+    <item name="fingerprint_sensor_location_fraction_y" type="fraction">73.91%</item>
 </resources>
