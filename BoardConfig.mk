@@ -21,7 +21,7 @@ $(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
 
 # Density
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 280
 
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/xiaomi/clover.config
