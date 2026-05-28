@@ -30,6 +30,3 @@ TARGET_KERNEL_CONFIG += vendor/xiaomi/clover.config
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
-# WLAN MAC
-WLAN_MAC_SYMLINK := false
-
