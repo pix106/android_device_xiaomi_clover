@@ -15,7 +15,10 @@ TARGET_TS_MAKEUP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-$(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
+SOONG_CONFIG_NAMESPACES += qcomcamera
+SOONG_CONFIG_qcomcamera += target_device
+SOONG_CONFIG_qcomcamera_target_device := clover
+$(call project-set-path,qcom-camera,hardware/qcom-caf/sdm660/camera)
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
