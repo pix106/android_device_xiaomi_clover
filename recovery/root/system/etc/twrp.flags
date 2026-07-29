@@ -18,8 +18,8 @@
 /dtbo          emmc     /dev/block/bootdevice/by-name/dtbo                      flags=display="Dtbo";backup=1;flashimg=1
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                   	flags=display="Firmware";mounttodecrypt;fsflags=ro
 /firmware_image   emmc  /dev/block/bootdevice/by-name/modem        		flags=display="Firmware_image";flashimg=1;backup=0
-/cust          ext4   	/dev/block/bootdevice/by-name/cust                      flags=display="Cust"
-/cust_image     emmc    /dev/block/bootdevice/by-name/cust                    	flags=display="Cust (Image)";backup=0;flashimg=1
+/cust          ext4     /dev/block/bootdevice/by-name/cust                      flags=display="Cust";wipeingui
+/cust_image    emmc     /dev/block/bootdevice/by-name/cust                      flags=display="Cust_image";backup=0;flashimg=1
 
 /misc          emmc   	/dev/block/bootdevice/by-name/misc
 /modem         emmc   	/dev/block/bootdevice/by-name/modem                     flags=backup=1;display="Modem"
