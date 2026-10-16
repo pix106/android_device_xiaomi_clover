@@ -38,15 +38,59 @@ on init
     symlink /dev/binderfs/hwbinder /dev/hwbinder
     symlink /dev/binderfs/vndbinder /dev/vndbinder
 
+    # Belt-and-braces with the ueventd rules: qseecomd drops to uid 1000
+    # before opening these nodes for its listeners, so they must be
+    # accessible to system before qseecomd starts.
+    chmod 0660 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
     setprop prepdecrypt.setpatch true
     setprop prepdecrypt.loglevel 2
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    # qseecomd's librpmb looks for the RPMB at the 4.4-era block device path
+    # /dev/block/mmcblk0rpmb; the 4.19 kernel only provides the character
+    # device /dev/mmcblk0rpmb. Without the link the keymaster TA's RPMB read
+    # fails ("rpmb read operation on invalid RPMB device") and begin()
+    # returns INCOMPATIBLE_BLOCK_MODE (-8).
+    chown system system /dev/mmcblk0rpmb
+    chmod 0660 /dev/mmcblk0rpmb
+    symlink /dev/mmcblk0rpmb /dev/block/mmcblk0rpmb
+
+    # The QSEE listeners of qseecomd serve the keymaster/gatekeeper TAs' files
+    # from persist at the same path as on the ROM. TWRP only mounts /persist
+    # briefly (time fixup), so mount it where the vendor blobs expect it,
+    # with the ROM's options, before qseecomd starts.
+    mkdir /mnt/vendor 0755 root root
+    mkdir /mnt/vendor/persist 0771 root system
+    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist nosuid nodev noatime barrier=1
+    # Expose the same mount at /persist, where TWRP expects it (time fixup,
+    # backups). A second mount of the block device fails with EBUSY.
+    mkdir /persist 0771 root system
+    mount none /mnt/vendor/persist /persist bind
+
+    # Match the recovery header's os_version/patch level to the installed ROM
+    # before keymaster is configured (reboots once if it had to change it)
+    exec_start sync_patchlevel
+    # keystore2 is already running at this point and reads the version /
+    # patch level properties only once at startup (they end up in the
+    # requests sent to the keymaster TA). Restart it so it picks up the
+    # ROM's values set by sync_patchlevel.
+    restart keystore2
     # DT2W
     write /sys/touchpanel/double_tap 1
 
 on boot
     start health-hal-2-1
     setprop sys.usb.config adb
+
+service sync_patchlevel /system/bin/sh /system/bin/sync_patchlevel.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0

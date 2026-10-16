@@ -100,6 +100,13 @@ RECOVERY_SDCARD_ON_DATA := true
 # Crypto
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
+# 4.19 ROMs: fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized (FBE v2)
+TW_USE_FSCRYPT_POLICY := 2
+# FBE v2 keys live in the mounted filesystem's keyring and are dropped when
+# /data is unmounted. Without this, Setup_Data_Media() unmounts /data right
+# after the DE keys were installed, system_de/0/spblob becomes unreadable and
+# the PIN is rejected ("Unknown password type").
+TW_PREPARE_DATA_MEDIA_EARLY := true
 PLATFORM_VERSION := 99.87.36
 PLATFORM_SECURITY_PATCH := 2127-12-31
 
@@ -117,6 +124,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
+# magiskboot, needed by sync_patchlevel.sh
+TW_INCLUDE_REPACKTOOLS := true
 
 # Debugging
 TWRP_INCLUDE_LOGCAT := true

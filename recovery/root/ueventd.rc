@@ -67,3 +67,14 @@ subsystem sound
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq   0664  system system
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq   0664  system system
+
+# qseecomd drops itself to uid/gid 1000 (system) before spawning its listener
+# threads (RPMB, SSD, qisl, gp_reqcancel, ...). With the driver-default
+# 0600 root:root nodes every listener open fails with EACCES, the keymaster TA
+# loses its normal-world callbacks and begin() fails with
+# INCOMPATIBLE_BLOCK_MODE (-8).
+/dev/qseecom              0660   system     drmrpc
+/dev/ion                  0664   system     system
+# On 4.19 the eMMC RPMB partition is a character device; qseecomd's RPMB
+# listener runs as system and the keymaster TA reads RPMB during begin().
+/dev/mmcblk0rpmb          0660   system     system
